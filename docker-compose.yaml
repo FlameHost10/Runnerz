@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=runnerz'
+      - 'POSTGRES_PASSWORD=password'
+      - 'POSTGRES_USER=fed'
+    ports:
+      - '5432:5432'
+
+#  pgweb:
+#    image: sosedoff/pgweb
+#    container_name: pgweb
+#    environment:
+#      DATABASE_URL: postgres://fed:password@postgres:5432/runnerz?sslmode=disable
+#    ports:
+#      - "8085:8081"
+#    depends_on:
+#      - postgres
